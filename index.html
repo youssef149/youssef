@@ -9,8 +9,8 @@
   <meta name="description" content="يوسف شهاب — جميع حساباتي وروابطي في مكان واحد.">
   <meta name="robots" content="index, follow, max-image-preview:large">
 
-  <!-- ضع كود Search Console هنا بعد أن يعطيك Google الكود الخاص بحسابك -->
-  <!-- <meta name="google-site-verification" content="google21b756dff4bd5e14"> -->
+  <!-- كود التحقق الخاص بـ Google Search Console -->
+  <meta name="google-site-verification" content="google21b756dff4bd5e14">
 
   <meta property="og:type" content="profile">
   <meta property="og:title" content="يوسف شهاب | جميع الروابط">
@@ -104,7 +104,7 @@ body{min-height:100vh;background:#030305;color:#fff;font-family:Cairo,sans-serif
 <script>
 function openQR(){const modal=document.getElementById('qrModal'),qr=document.getElementById('qrcode');qr.innerHTML='';if(typeof QRCode==='undefined'){alert('تعذر تحميل مولد QR. تأكد من اتصال الإنترنت ثم حاول مرة أخرى.');return}new QRCode(qr,{text:location.href,width:220,height:220,colorDark:'#000',colorLight:'#fff',correctLevel:QRCode.CorrectLevel.H});modal.classList.add('active')}
 function closeQR(){document.getElementById('qrModal').classList.remove('active')}
-document.getElementById('qrModal').addEventListener('click',e=>{if(e.target===e.currentTarget)closeQR()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeQR()});
+document.getElementById('qrModal').addEventListener('click',e=>{e.target===e.currentTarget&&closeQR()});document.addEventListener('keydown',e=>{e.key==='Escape'&&closeQR()});
 </script>
 </body>
 </html>
